@@ -11,5 +11,6 @@ exit
 pacman -U /home/build/foldingathome/foldingathome-*.pkg.tar.zst
 pacman -S clinfo cuda ocl-icd opencl-driver #only if GPU folding
 nano /etc/foldingathome/config.xml
-systemctl start foldingathome
+systemctl start foldingathome-nvidia.service #only if GPU folding
+systemctl start foldingathome.service
 tail -f /var/log/foldingathome/log.txt
